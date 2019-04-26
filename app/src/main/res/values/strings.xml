@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">SwipeGesturesBurger</string>
+
+    <string name="swipe_on_activity">Swipe on Activity</string>
+    <string name="swipe_on_fragment">Swipe on Fragment</string>
+
+    <string name="intro">Gestures Practice App</string>
+    <string name="detail">Swipe on the screen.\nThe app will detect the gesture, measure it an give statistics about it.\nThe SwipeUtils class has logic to detect if this was a Swing UP, DOWN, LEFT or RIGHT"</string>
+    <string-array name="motion_event_titles">
+        <item>Initial Motion Event</item>
+        <item>Ending Motion Event</item>
+    </string-array>
+    <string name="action">action: %s</string>
+    <string name="coordinates">coordinates: (%.2f, %.2f) </string>
+    <string name="velocity">velocity</string>
+    <string name="velocity_val">velocity %s: %.2f pxl/ms</string>
+    <string name="angle">angle</string>
+    <string name="angle_val">angle: %.2f degrees</string>
+
+    <string name="intro_on_fragment">Gestures on a Fragment</string>
+    <string name="detail_on_fragment">Swipe LEFT or RIGHT on the screen.\nThe app will detect the gesture and apply an animation on objects on a Fragment.\nThe OnTouchEvent is different on a Fragment than on an Activity"</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
