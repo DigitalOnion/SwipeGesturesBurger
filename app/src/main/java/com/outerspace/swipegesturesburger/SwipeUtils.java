@@ -61,15 +61,14 @@ public class SwipeUtils {
         return (float) Math.sqrt(dx * dx + dy * dy);
     }
 
-    public static float swipePercent(MotionEvent initial, MotionEvent ending) {
-        DisplayMetrics dm = new DisplayMetrics();
-        int h = dm.heightPixels;
-        int w = dm.widthPixels;
+    public static float swipePercent(DisplayMetrics displayMetrics, MotionEvent initial, MotionEvent ending) {
+        int h = displayMetrics.heightPixels;
+        int w = displayMetrics.widthPixels;
         float l = swipeLength(initial, ending);
         SwipeType st = swipeType(initial, ending);
         if(st == SwipeType.SWIPE_DOWN || st == SwipeType.SWIPE_UP)
-                return h / l;
+                return l / h;
         else
-                return w / l;
+                return l / w;
     }
 }

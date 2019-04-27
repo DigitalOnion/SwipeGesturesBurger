@@ -14,7 +14,7 @@
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
         </activity>
-        <activity android:name=".SwipeButtonsOnFragmentActivity">
+        <activity android:name=".SwipeOnFragmentActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>

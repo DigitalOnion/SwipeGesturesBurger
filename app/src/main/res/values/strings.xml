@@ -16,6 +16,10 @@
     <string name="velocity_val">velocity %s: %.2f pxl/ms</string>
     <string name="angle">angle</string>
     <string name="angle_val">angle: %.2f degrees</string>
+    <string name="length">length</string>
+    <string name="length_val">length: %.2f pixels</string>
+    <string name="orientation">Orientation</string>
+    <string name="orientation_val">%s.getOrientation() = %.2f</string>
 
     <string name="intro_on_fragment">Gestures on a Fragment</string>
     <string name="detail_on_fragment">Swipe LEFT or RIGHT on the screen.\nThe app will detect the gesture and apply an animation on objects on a Fragment.\nThe OnTouchEvent is different on a Fragment than on an Activity"</string>

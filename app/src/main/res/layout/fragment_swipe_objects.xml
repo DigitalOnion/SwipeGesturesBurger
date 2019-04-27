@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ // %BANNER_BEGIN%
+  ~ // %COPYRIGHT_BEGIN%
+  ~ //
+  ~ // Copyright (c) 2017 Magic Leap, Inc. (COMPANY) All Rights Reserved.
+  ~ // Magic Leap, Inc. Confidential and Proprietary
+  ~ //
+  ~ //  NOTICE:  All information contained herein is, and remains the property
+  ~ //  of COMPANY. The intellectual and technical concepts contained herein
+  ~ //  are proprietary to COMPANY and may be covered by U.S. and Foreign
+  ~ //  Patents, patents in process, and are protected by trade secret or
+  ~ //  copyright law.  Dissemination of this information or reproduction of
+  ~ //  this material is strictly forbidden unless prior written permission is
+  ~ //  obtained from COMPANY.  Access to the source code contained herein is
+  ~ //  hereby forbidden to anyone except current COMPANY employees, managers
+  ~ //  or contractors who have executed Confidentiality and Non-disclosure
+  ~ //  agreements explicitly covering such access.
+  ~ //
+  ~ //  The copyright notice above does not evidence any actual or intended
+  ~ //  publication or disclosure  of  this source code, which includes
+  ~ //  information that is confidential and/or proprietary, and is a trade
+  ~ //  secret, of  COMPANY.   ANY REPRODUCTION, MODIFICATION, DISTRIBUTION,
+  ~ //  PUBLIC  PERFORMANCE, OR PUBLIC DISPLAY OF OR THROUGH USE  OF THIS
+  ~ //  SOURCE CODE  WITHOUT THE EXPRESS WRITTEN CONSENT OF COMPANY IS
+  ~ //  STRICTLY PROHIBITED, AND IN VIOLATION OF APPLICABLE LAWS AND
+  ~ //  INTERNATIONAL TREATIES.  THE RECEIPT OR POSSESSION OF  THIS SOURCE
+  ~ //  CODE AND/OR RELATED INFORMATION DOES NOT CONVEY OR IMPLY ANY RIGHTS
+  ~ //  TO REPRODUCE, DISCLOSE OR DISTRIBUTE ITS CONTENTS, OR TO MANUFACTURE,
+  ~ //  USE, OR SELL ANYTHING THAT IT  MAY DESCRIBE, IN WHOLE OR IN PART.
+  ~ //
+  ~ // %COPYRIGHT_END%
+  ~ // %BANNER_END%
+  -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:keepScreenOn="true"
+    tools:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+    <View
+        android:id="@+id/connection_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/touchpad"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/app_name"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:enabled="false"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/connection_status" />
+
+    <TextView
+        android:id="@+id/text_feedback_chars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@android:color/transparent"
+        android:ellipsize="end"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="center_horizontal"
+        android:lines="3"
+        android:padding="20dp"
+        android:scrollHorizontally="false"
+        android:textColor="#DDFFFFFF"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/touchpad"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/connection_status"
+        tools:text="abc" />
+
+    <ImageView
+        android:id="@+id/button_home"
+        android:layout_width="126dp"
+        android:layout_height="126dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#dddddd"
+        android:clickable="true"
+        android:contentDescription="@string/app_name"
+        android:focusable="true"
+        android:padding="48dp"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:layout_marginTop="20dp"
+        android:shadowRadius="5"
+        android:tint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/touchpad"
+        app:srcCompat="@drawable/ic_happy_face" />
+
+    <ImageView
+        android:id="@+id/icon_van"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:background="#dddddd"
+        android:clickable="true"
+        android:contentDescription="@string/app_name"
+        android:focusable="true"
+        android:padding="20dp"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/touchpad"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.55"
+        app:layout_constraintHorizontal_bias=".94"
+        app:srcCompat="@drawable/ic_coffee_cup" />
+
+    <ImageView
+        android:id="@+id/icon_coffee_cup"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:background="#dddddd"
+        android:clickable="true"
+        android:contentDescription="@string/app_name"
+        android:focusable="true"
+        android:padding="20dp"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/touchpad"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.55"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:srcCompat="@drawable/ic_van" />
+
+    <View
+        android:id="@+id/hints_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:clickable="false"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/touchpad"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/connection_status" />
+
+    <RelativeLayout
+        android:id="@+id/parent_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/connection_status">
+
+        <RelativeLayout
+            android:id="@+id/keyboard_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#E6000000"
+            android:clickable="true"
+            android:padding="10dp"
+            android:visibility="gone"
+            tools:ignore="UselessParent,KeyboardInaccessibleWidget">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/button_send"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/textInputLayout"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FF5555"
+                android:tint="@android:color/white"
+                app:srcCompat="@drawable/ic_arrow_forward" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toStartOf="@+id/button_send"
+                >
+
+                <EditText
+                    android:id="@+id/textKeyboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNone"
+                    android:inputType="text|textMultiLine"
+                    android:maxLines="20"
+                    android:singleLine="false"
+                    android:textColor="@android:color/white" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

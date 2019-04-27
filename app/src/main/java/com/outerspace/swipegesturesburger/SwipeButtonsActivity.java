@@ -79,7 +79,7 @@ public class SwipeButtonsActivity extends AppCompatActivity {
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
             SwipeUtils.SwipeType swipe = SwipeUtils.swipeType(e1, e2);
-            float percent = SwipeUtils.swipePercent(e1, e2);
+            // float percent = SwipeUtils.swipePercent(e1, e2);
             if(( swipe == SwipeUtils.SwipeType.SWIPE_RIGHT || swipe == SwipeUtils.SwipeType.SWIPE_LEFT)) {
                 swapIcons();
             }

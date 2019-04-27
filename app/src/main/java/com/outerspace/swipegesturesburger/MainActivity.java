@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.action_swipe_on_fragment:
-                Intent intentOnFragment = new Intent(this, SwipeButtonsOnFragmentActivity.class);
+                Intent intentOnFragment = new Intent(this, SwipeOnFragmentActivity.class);
                 startActivity(intentOnFragment);
                 break;
         }
@@ -81,6 +81,11 @@ public class MainActivity extends AppCompatActivity {
             sb.append(spacer).append(String.format(Locale.getDefault(), getString(R.string.velocity_val), "Y", velocityY)).append('\n');
             sb.append(getString(R.string.angle)).append('\n');
             sb.append(spacer).append(String.format(Locale.getDefault(), getString(R.string.angle_val), Math.toDegrees(SwipeUtils.angleRadians(e1, e2)))).append('\n');
+            sb.append(getString(R.string.length)).append('\n');
+            sb.append(spacer).append(String.format(Locale.getDefault(), getString(R.string.length_val), SwipeUtils.swipeLength(e1, e2))).append('\n');
+            sb.append(getString(R.string.orientation)).append('\n');
+            sb.append(spacer).append(String.format(Locale.getDefault(), getString(R.string.orientation_val), "e1", e1.getOrientation(e1.getPointerId(0)))).append('\n');
+            sb.append(spacer).append(String.format(Locale.getDefault(), getString(R.string.orientation_val), "e2", e2.getOrientation(e2.getPointerId(0)))).append('\n');
             sb.append(SwipeUtils.swipeType(e1, e2).toString());
             textMonitor.setText(sb.toString());
             return true;
